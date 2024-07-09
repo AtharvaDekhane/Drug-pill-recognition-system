@@ -1,0 +1,87 @@
+<!-- Store this code in 'index.html' file inside the 'templates' folder-->
+
+<html> 
+	<head> 
+<style>
+div.scroll
+{
+Width 30px;
+Height 30 px;
+Overflow-x:scroll;
+}
+</style>
+<style>
+.divScroll {
+overflow:scroll;
+height:500px;
+width:500px;
+}
+</style>
+
+<style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+  left: 25px;
+}
+
+td {
+  text-align: center;
+  width:10px;
+}
+</style>		<meta charset="UTF-8"> 
+		<title> Index </title> 
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">					 
+	</head> 
+	<body></br></br></br></br></br> 
+		<div align="center"> 
+		<div align="center" class="border"> 
+			<div class="header"> 
+				<h1 class="word">Index</h1> 
+
+			</div></br></br></br> 
+<div class="divScroll">
+<table >
+
+<th>ID</th>
+<th>Name</th>
+<th>Brand</th>
+<th>Type</th>
+<th>MFG</th>
+<th>Text</th>
+<th>Expiry</th>
+<th>Colour</th>
+<th>Delete</th>
+
+{% for item in data %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+ <td>{{item[2]}}</td>
+    <td>{{item[3]}}</td>
+
+ <td>{{item[6]}}</td>
+    <td>{{item[4]}}</td>
+
+ <td>{{item[7]}}</td>
+    <td>{{item[9]}}</td>
+<td><a href="{{ url_for('delete',data=item[0])}}" >Delete</a> </td>
+
+
+
+</tr>
+{% endfor %}
+</table>
+</div>
+				</br></br></br> 
+				<a href="{{ url_for('logout') }}" class="btn">Logout</a> 
+		</div> 
+		</div> 
+	</body> 
+</html> 

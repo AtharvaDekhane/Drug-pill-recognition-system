@@ -1,0 +1,28 @@
+<!-- Store this code in 'register.html' file inside the 'templates' folder -->
+
+<html> 
+	<head> 
+		<meta charset="UTF-8"> 
+		<title> Register </title> 
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">			 
+	</head> 
+	<body style='background-color: coral'></br></br></br> 
+		<div align="center" style='height:1000px'> 
+		<div align="center" class="border" > 
+			<div class="header" > 
+				<h1 class="word">Medicine</h1> 
+			</div>
+			<h2 class="word" style='height:1000px'> 
+				<form action="{{ url_for('compare') }}" > 
+				
+					
+					<input type="submit" class="btn" value="Check Medicine"> 
+
+				</form> 
+<a href="{{ url_for('logout') }}" class="btn">Logout</a> 
+			</h2> 
+			
+		</div> 
+		</div> 
+	</body> 
+</html> 

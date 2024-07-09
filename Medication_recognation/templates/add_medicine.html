@@ -1,0 +1,43 @@
+<!-- Store this code in 'register.html' file inside the 'templates' folder -->
+
+<html> 
+	<head> 
+		<meta charset="UTF-8"> 
+		<title> Register </title> 
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">			 
+	</head> 
+	<body style='background-color: coral'></br></br></br> 
+		<div align="center" style='height:1000px'> 
+		<div align="center" class="border" > 
+			<div class="header" > 
+				<h1 class="word">Medicine</h1> 
+			</div>
+			<h2 class="word" style='height:1000px'> 
+				<form action="{{ url_for('add_medicine') }}" method="post"> 
+				<div class="msg">{{ msg }}</div> 
+					<input id="name1" name="name1" type="text" placeholder="Enter name" class="textbox"/></br></br> 
+					<input id="brand_name" name="brand_name" type="text" placeholder="Enter brand_name" class="textbox"/></br></br> 
+					<select name="type_" id="type_">
+<option value="pill">Select Type</option>
+
+<option value="pill">Pill</option>
+<option value="capsul">Capsul</option>
+
+</select>
+</br></br> 
+<input id="text_" name="text_" type="text" placeholder="Enter text seen tablet" class="textbox"/></br></br> 
+<input id="use_" name="use_" type="text" placeholder="Enter use" class="textbox"/></br></br> 
+<input id="mfg" name="mfg" type="date" placeholder="Select Date" class="textbox"/></br></br> 
+<input id="expiry" name="expiry" type="date" placeholder="select date" class="textbox"/></br></br> 
+<input id="doses" name="doses" type="text" placeholder="1-1-1" class="textbox"/></br></br> 
+<input id="colour" name="colour" type="text" placeholder="colour of medicine" class="textbox"/></br></br> 
+					<input type="submit" class="btn" value="Submit"> 
+
+				</form> 
+<p class="bottom">View Medicine<a class="bottom" href="{{url_for('admin2')}}"> List</a></p> 
+			</h2> 
+			
+		</div> 
+		</div> 
+	</body> 
+</html> 

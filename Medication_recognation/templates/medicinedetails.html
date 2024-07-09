@@ -1,0 +1,38 @@
+<!-- Store this code in 'index.html' file inside the 'templates' folder-->
+
+<html> 
+	<head> 
+<style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+  width:10px;
+}
+</style>		<meta charset="UTF-8"> 
+		<title> Medicine Details </title> 
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">					 
+	</head> 
+	<body></br></br></br></br></br> 
+		<div align="center"> 
+		<div align="center" class="border"> 
+			<div class="header"> 
+				<h1 class="word"> Details </h1> 
+
+			</div></br></br></br> 
+<p>
+{{data}}
+</p>
+				</br></br></br> 
+				<a href="{{ url_for('logout') }}" class="btn">Logout</a> 
+		</div> 
+		</div> 
+	</body> 
+</html> 

@@ -1,0 +1,32 @@
+<!-- Store this code in 'register.html' file inside the 'templates' folder -->
+
+<html> 
+	<head> 
+		<meta charset="UTF-8"> 
+		<title> Register </title> 
+		<link rel="stylesheet" href="style1.css">			 
+	</head> 
+	<body style='background-color: coral'></br></br></br> 
+		<div align="center" style='height:1000px'> 
+		<div align="center" class="border" > 
+			<div class="header" > 
+				<h1 class="word">Register</h1> 
+			</div>
+			<h2 class="word" > 
+				<form action="{{ url_for('register') }}" method="post"> 
+				<div class="msg">{{ msg }}</div> 
+					<input id="name" name="name" type="text" placeholder="Enter Your name" class="textbox"/></br></br> 
+					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br> 
+					<input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br> 
+<input id="mobile" name="mobile" type="text" placeholder="Enter Your mobile" class="textbox"/></br></br> 
+<input id="address" name="address" type="text" placeholder="Enter Your address" class="textbox"/></br></br> 
+<input id="r_mobile" name="r_mobile" type="text" placeholder="Enter Your relatives mobile number" class="textbox"/></br></br> 
+<input id="disease" name="disease" type="text" placeholder="Enter Your disease name" class="textbox"/></br></br> 
+					<input type="submit" class="btn" value="Sign Up"></br> <p class="bottom">Already have an account? <a class="bottom" href="{{url_for('login_nav')}}"> Sign In here</a></p> 
+				</form> 
+			</h2> 
+			
+		</div> 
+		</div> 
+	</body> 
+</html> 
